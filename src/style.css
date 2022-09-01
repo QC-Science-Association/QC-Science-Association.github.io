@@ -1,5 +1,5 @@
 :root {
-	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+	font-family: roboto;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;
@@ -72,4 +72,70 @@ button:focus-visible {
 	button {
 		background-color: #f9f9f9;
 	}
+}
+
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../robotomono/RobotoMono-Thin.ttf') format('truetype');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../robotomono/RobotoMono-Light.ttf') format('truetype');
+	font-weight: 200 300;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../robotomono/RobotoMono-Regular.ttf') format('truetype');
+	font-weight: 400 500;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../robotomono/RobotoMono-Medium.ttf') format('truetype');
+	font-weight: 600 700;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../robotomono/RobotoMono-Bold.ttf') format('truetype');
+	font-weight: 800 900;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../robotomono/RobotoMono-ThinItalic.ttf') format('truetype');
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../robotomono/RobotoMono-LightItalic.ttf') format('truetype');
+	font-weight: 200 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../robotomono/RobotoMono-RegularItalic.ttf') format('truetype');
+	font-weight: 400 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../robotomono/RobotoMono-MediumItalic.ttf') format('truetype');
+	font-weight: 600 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../robotomono/RobotoMono-BoldItalic.ttf') format('truetype');
+	font-weight: 800 900;
+	font-style: italic;
 }
