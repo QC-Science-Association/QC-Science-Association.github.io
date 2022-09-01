@@ -20,7 +20,8 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"],
-    }
+    },
+    "types": [ "vue/ref-macros" ]
   },
   "include": [
     "src/**/*.ts",

@@ -5,6 +5,10 @@ import TopBar from "./components/TopBar.vue";
 <template>
 	<div>
 		<TopBar />
+		<br
+			v-for="i in 100"
+			:key="i"
+		>
 	</div>
 </template>
 
