@@ -10,19 +10,25 @@ const getScroll = (function() {
 	return () => window.pageYOffset;
 }());
 
-// eslint-disable-next-line no-unused-vars
 let scroll = $ref(0);
-addEventListener("scroll", () => scroll = getScroll());
+const maxLogoSize = 80;
+const maxTitleSize = 2.4, minTitleSize = 1.5;
+const logoSize = $computed(() => Math.max((1 - scroll / 250) * maxLogoSize, 0));
+const titleSize = $computed(() => `${Math.max(
+	(maxTitleSize - minTitleSize) * (1 - scroll / 250),
+	0
+) + minTitleSize}em`);
 
-const logoSize = $computed(() => Math.max(80 - scroll / 3, 0));
-const titleSize = $computed(() => `${Math.max(2.4 - scroll / 400, 1.5)}em`);
+addEventListener("scroll", () => scroll = getScroll());
 </script>
 
 <template>
 	<div class="c-topbar">
 		<span
 			class="c-topbar__title"
-			:style="{ fontSize: titleSize }"
+			:style="{
+				fontSize: titleSize
+			}"
 		>
 			QC SCIENCE ASSOCIATION
 		</span>
@@ -31,6 +37,24 @@ const titleSize = $computed(() => `${Math.max(2.4 - scroll / 400, 1.5)}em`);
 			:src="LogoPath"
 			:width="logoSize"
 			:height="logoSize"
+			:style="{
+				opacity: logoSize / maxLogoSize * 1.2 + 0.2
+			}"
+		>
+	</div>
+	<div class="c-topbar c-topbar--fake">
+		<span
+			class="c-topbar__title"
+			:style="{
+				fontSize: maxTitleSize
+			}"
+		>
+			QC SCIENCE ASSOCIATION
+		</span>
+		<img
+			class="c-topbar__logo-image"
+			:width="maxLogoSize"
+			:height="maxLogoSize"
 		>
 	</div>
 </template>
@@ -39,8 +63,9 @@ const titleSize = $computed(() => `${Math.max(2.4 - scroll / 400, 1.5)}em`);
 .c-topbar {
 	display: flex;
 	flex-direction: column;
-	place-items: center;
-	position: sticky;
+	align-items: center;
+	justify-content: flex-end;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -51,6 +76,12 @@ const titleSize = $computed(() => `${Math.max(2.4 - scroll / 400, 1.5)}em`);
 	a solid colour at the bottom and none at the top */
 	background-size: 100% 240%;
 	background-position-y: 20%;
+	text-align: center;
+}
+
+.c-topbar--fake {
+	position: static;
+	visibility: hidden;
 }
 
 .c-topbar__title {

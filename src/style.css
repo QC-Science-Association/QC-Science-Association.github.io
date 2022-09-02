@@ -4,9 +4,8 @@
 	line-height: 24px;
 	font-weight: 400;
 
-	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
+	color: var(--color-text);
+	background-color: var(--color-background);
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -15,15 +14,17 @@
 	-webkit-text-size-adjust: 100%;
 
 	--colour-accent: #f8c321;
+	--color-text: rgba(255, 255, 255, 0.87);
+	--color-background: #242424;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 a {
+	color: var(--color-text);
 	font-weight: 500;
-	color: #646cff;
-	text-decoration: inherit;
-}
-a:hover {
-	color: #535bf2;
 }
 
 body {
@@ -57,20 +58,9 @@ button:focus-visible {
 
 #app {
 	margin: 0 auto;
-	text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
-	a:hover {
-		color: #747bff;
-	}
-	button {
-		background-color: #f9f9f9;
-	}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 
@@ -120,7 +110,7 @@ button:focus-visible {
 
 @font-face {
 	font-family: 'roboto';
-	src: url('../robotomono/RobotoMono-RegularItalic.ttf') format('truetype');
+	src: url('../robotomono/RobotoMono-Italic.ttf') format('truetype');
 	font-weight: 400 500;
 	font-style: italic;
 }
