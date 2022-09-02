@@ -13,7 +13,7 @@ const getScroll = (function() {
 let scroll = $ref(0);
 const maxLogoSize = 80;
 const maxTitleSize = 2.4, minTitleSize = 1.5;
-const logoSize = $computed(() => Math.max((1 - scroll / 250) * maxLogoSize, 0));
+const logoSize = $computed(() => Math.max((1 - scroll / 150) * maxLogoSize, 0));
 const titleSize = $computed(() => `${Math.max(
 	(maxTitleSize - minTitleSize) * (1 - scroll / 250),
 	0
