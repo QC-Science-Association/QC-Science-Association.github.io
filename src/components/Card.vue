@@ -29,7 +29,10 @@ const { card } = defineProps<{
 			class="c-paragraph-card__title"
 			v-html="card.title"
 		/>
-		<span v-html="card.content" />
+		<span
+			class="c-paragraph-card__content"
+			v-html="card.content"
+		/>
 	</div>
 </template>
 
@@ -62,5 +65,9 @@ const { card } = defineProps<{
 	border-bottom: 2px solid var(--colour-accent);
 	margin-top: 0;
 	padding-bottom: 10px;
+}
+
+.c-paragraph-card__content {
+	font-weight: 300;
 }
 </style>
