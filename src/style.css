@@ -1,11 +1,11 @@
 :root {
 	font-family: roboto;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 1.5;
 	font-weight: 400;
 
-	color: var(--color-text);
-	background-color: var(--color-background);
+	color: var(--colour-text);
+	background-color: var(--colour-background);
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -14,8 +14,8 @@
 	-webkit-text-size-adjust: 100%;
 
 	--colour-accent: #f8c321;
-	--color-text: rgba(255, 255, 255, 0.87);
-	--color-background: #242424;
+	--colour-text: rgba(255, 255, 255, 0.87);
+	--colour-background: #242424;
 }
 
 * {
@@ -23,7 +23,7 @@
 }
 
 a {
-	color: var(--color-text);
+	color: var(--colour-text);
 	font-weight: 500;
 }
 
@@ -61,6 +61,12 @@ button:focus-visible {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+	:root {
+		font-size: 12px;
+	}
 }
 
 

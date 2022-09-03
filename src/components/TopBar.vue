@@ -11,8 +11,9 @@ const getScroll = (function() {
 }());
 
 let scroll = $ref(0);
-const maxLogoSize = 80;
-const maxTitleSize = 2.4, minTitleSize = 1.5;
+let maxLogoSize = $ref(80);
+let maxTitleSize = $ref(2.4);
+const minTitleSize = 1.5;
 const logoSize = $computed(() => Math.max((1 - scroll / 150) * maxLogoSize, 0));
 const titleSize = $computed(() => `${Math.max(
 	(maxTitleSize - minTitleSize) * (1 - scroll / 250),
@@ -20,6 +21,10 @@ const titleSize = $computed(() => `${Math.max(
 ) + minTitleSize}em`);
 
 addEventListener("scroll", () => scroll = getScroll());
+addEventListener("resize", () => {
+	maxTitleSize = innerWidth < 640 ? 1.9 : 2.4;
+	maxLogoSize = Math.max(Math.min(innerWidth / 8, 80), 40);
+});
 </script>
 
 <template>
@@ -68,6 +73,7 @@ addEventListener("scroll", () => scroll = getScroll());
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 1;
 	width: 100%;
 	border-bottom: 5px solid var(--colour-accent);
 	padding: 10px 0;
@@ -77,6 +83,17 @@ addEventListener("scroll", () => scroll = getScroll());
 	background-size: 100% 240%;
 	background-position-y: 20%;
 	text-align: center;
+}
+
+.c-topbar::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: var(--colour-background);
+	opacity: 0.5;
 }
 
 .c-topbar--fake {

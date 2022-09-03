@@ -3,13 +3,25 @@ import LogoImgBig from "@/assets/logo-big.png";
 
 import { Page } from ".";
 
+Page.content.notification = {
+	title: "SUBCOMS WANTED!",
+	content: `We are currently looking for subcoms for the 2022-2023 school year. Duties may include:
+	<ul>
+		<li>Designing visuals for IG posts, billboards and Scientia</li>
+		<li>Writing for IG posts and Scientia</li>
+		<li>Caring for horseshoe crabs</li>
+		<li>Preparation for open days</li>
+	</ul>
+	Information will be released through the school gmail shortly.`
+};
+
 Page.content.cards = [{
 	headerImage: {
 		href: LogoImgBig,
 		width: 200
 	},
 	title: `Welcome to our homepage!`,
-	content: `We are the Queen's College Science Association, a club dedicated to education of students on
+	content: `We are the Queen's College Science Association, a club dedicated to educating students on
 	miscellaneous scientific topics. Although our specialisation is Chemistry, we also strive to connect it
 	with other disciplines of science, such as Physics and Biology, to provide a more complete and fulfilling
 	scientific understanding of the universe that we live in.
