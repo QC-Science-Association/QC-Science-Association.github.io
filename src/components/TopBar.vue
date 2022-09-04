@@ -162,4 +162,14 @@ addEventListener("resize", () => {
 	background-color: var(--colour-text);
 	color: var(--colour-background);
 }
+
+@media screen and (max-width: 640px) {
+	.c-topbar__tab-buttons {
+		height: 40px;
+	}
+
+	.c-topbar__tab-button {
+		min-width: 80px;
+	}
+}
 </style>
