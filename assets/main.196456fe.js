@@ -1,4 +1,4 @@
-import{P as e,c as o,_ as i}from"./App.vue_vue_type_script_setup_true_lang.3100de33.js";const t=""+new URL("horseshoe-crab.834901ca.jpg",import.meta.url).href,a=""+new URL("logo-big.572e3684.png",import.meta.url).href;e.content.notification={title:"SUBCOMS WANTED!",content:`We are currently looking for subcoms for the 2022-2023 school year. Duties may include:
+import{P as e,c as o,_ as i}from"./App.vue_vue_type_script_setup_true_lang.86d237c8.js";const t=""+new URL("horseshoe-crab.834901ca.jpg",import.meta.url).href,a=""+new URL("logo-big.572e3684.png",import.meta.url).href;e.content.notification={title:"SUBCOMS WANTED!",content:`We are currently looking for subcoms for the 2022-2023 school year. Duties may include:
 	<ul>
 		<li>Designing visuals for IG posts, billboards and Scientia</li>
 		<li>Writing for IG posts and Scientia</li>
