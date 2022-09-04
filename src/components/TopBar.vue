@@ -144,7 +144,7 @@ addEventListener("resize", () => {
 	z-index: -1;
 	background-color: var(--colour-accent);
 	filter: brightness(0.8);
-	opacity: 0.8;
+	opacity: 0.2;
 }
 
 .c-topbar__tab-button {
@@ -155,12 +155,10 @@ addEventListener("resize", () => {
 	height: 100%;
 	border-right: 1px solid var(--colour-text);
 	text-decoration: none;
-	opacity: 0.8;
 	transition: color 0.1s, background-color 0.1s;
 }
 
 .c-topbar__tab-button:hover {
-	opacity: 1;
 	background-color: var(--colour-text);
 	color: var(--colour-background);
 }
