@@ -16,8 +16,8 @@ for (let idx = 0; idx < Roadmap.length; idx++) {
 	const event = Roadmap[idx];
 	const space = idx === 0 ? 0 : Math.log2(event.date.getTime() - Roadmap[idx - 1].date.getTime()) * 10 - 205;
 	if (currentTime <= event.date.getTime() && !timeSpacing) {
-		timeSpacing = roadmapEntries[idx - 1].totalSpacing +
-			space * (event.date.getTime() - currentTime) / (event.date.getTime() - Roadmap[idx - 1].date.getTime());
+		timeSpacing = roadmapEntries[idx - 1].totalSpacing + space *
+			(1 - (event.date.getTime() - currentTime) / (event.date.getTime() - Roadmap[idx - 1].date.getTime()));
 	}
 	roadmapEntries.push({
 		...event,
