@@ -24,7 +24,7 @@ export const Roadmap: RoadmapDBEntry[] = [{
 },
 {
 	date: new Date(2022, 9, 14),
-	title: "Orientation Day"
+	title: "(POSTPONED) Orientation Day"
 },
 {
 	date: new Date(2022, 9, 21),
